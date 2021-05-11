@@ -1,0 +1,60 @@
+<!-- APIP css tambahan -->
+<style>
+  /*page akun*/
+  .page-id-14 #primary{
+    padding: 3rem!important;
+  }
+
+  .page-id-14 .entry-header{
+    display: none;
+  }
+
+  .page-id-14 .storefront-breadcrumb{
+    display: none;
+  }
+
+
+  /*page produk*/
+  .page-id-2208 #primary{
+    padding: 3rem!important;
+  }
+
+  .page-id-2208 .entry-header{
+    display: none;
+  }
+
+  .page-id-2208 .storefront-breadcrumb{
+    display: none;
+  }
+
+
+  /*page produk single */
+  .single-product .site-content {
+    padding: 1.5rem!important;
+  }
+  .single-product .storefront-breadcrumb {
+    padding: 1.5rem!important;
+  }
+
+
+  /*page archive */
+  .archive .site-content {
+    padding: 1.5rem!important;
+  }
+  .archive .storefront-breadcrumb {
+    padding: 1.5rem!important;
+  }
+
+
+  /*post archive */
+  .single-post .site-content {
+    padding-left: 10vw!important;
+    padding-right: 10vw!important;
+  }
+  .single-post .storefront-breadcrumb {
+    padding-left: 10vw!important;
+    padding-right: 10vw!important;
+    margin-bottom: 0px!important;
+  }
+</style>
+<!-- APIP css tambahan END -->

@@ -38,3 +38,7 @@ amp/templates/single.php -> copy all aja, karena ori nya terlalu berantakan
 Step #11
 apip/
 berikut merupakan gambar-gambar yang dibutuhkan untuk custom menu, page, dll
+
+Step #12
+script page/
+berisi tentant custom page html

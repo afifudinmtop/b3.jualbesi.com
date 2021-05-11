@@ -42,3 +42,7 @@ berikut merupakan gambar-gambar yang dibutuhkan untuk custom menu, page, dll
 Step #12
 script page/
 berisi tentant custom page html
+
+Step #13
+table of content/
+berisi custom html untuk membuat floating custom table of content untuk post

@@ -1,0 +1,466 @@
+<!-- APIP CODE -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Jualbesi</title>
+    <style>
+      .apipx{
+        font-size: 10px;
+      }
+
+      .apipx2{
+        font-size: 10px;
+      }
+
+      .apip_pointer{
+        cursor: pointer;
+      }
+
+      .apip_close{
+        background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;opacity: unset;
+      }
+
+      .fw500{
+        font-weight: 500;
+      }
+
+      #masthead{
+        display:none
+      }
+
+      .site-info{
+        display: none;
+      }
+
+      .storefront-handheld-footer-bar{
+        display: none;
+      }
+
+      .footer-widgets.row-1.col-1.fix{
+        width: 100%;
+      }
+
+      #main{
+        margin-bottom:0px
+      }
+
+      #primary{
+        margin-bottom:0px
+      }
+
+      .col-full{
+        max-width: unset;
+        padding: unset;
+        margin: unset;
+      }
+
+      .site-footer{
+        padding: unset;
+      }
+
+      .footer-widgets {
+        padding: unset;
+      }
+
+      #custom_html-3{
+        margin: unset;
+      }
+      #custom_html-2{
+        padding: unset;
+      }
+      .modal-backdrop{
+        display: none!important;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light px-md-5" style="background-color: #0C27A7;">
+      <div class="container px-md-5">
+        <a class="navbar-brand px-md-5" href="/">
+          <img src="/logo.png" alt="logo" style="max-width: 70%;height: auto;">
+        </a>
+        <button onclick="tampil_menu.click()" style="background: white;" class="navbar-toggler px-md-5" type="button" data-bs-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- <button onclick="tampil_menu.click()" style="background: white;" class="navbar-toggler px-md-5" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <div class="px-md-5 collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-1 me-auto mb-2 mb-lg-0">
+            <li class="nav-item mx-2">
+              <a class="nav-link text-light fw-bold" href="/">Home</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link text-light fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#modal1">Produk</a>
+              <a id="tampil_menu" class="nav-link text-light fw-bold d-none" href="#" data-bs-toggle="modal" data-bs-target="#modal2">Menu</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link text-light fw-bold" href="/about-us/">About</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link text-light fw-bold" href="/contact-us/">Contact Us</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link text-light fw-bold" href="/akun-saya/">Akun</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <div class="input-group">
+              <span class="input-group-text" id="basic-addon">Search</span>
+              <input onkeyup="cari(this.value)" type="text" class="form-control" placeholder="cari produk" aria-label="Username" aria-describedby="basic-addon">
+            </div>
+            <div id="hasil" class="mt-5 rounded-bottom position-absolute bg-light" style="z-index: 100;">
+            </div>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal 1-->
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="ModalLabel1" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header px-md-5">
+            <h5 class="modal-title fw500" id="exampleModalLabel1">Produk</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body mx-auto mt-3" style="max-width: 1000px;">
+
+            <div onclick="window.location.href = '/produk/';" class="my-2 card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/all.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">All Product</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/kategori-produk/besi-profile/besi-hollow/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/hollow.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">Hollow Galvanis</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/besi-ss/harga-stainless-steel-surabaya/#hollowstainlesssteel';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/galvalum.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">Hollow Stainless</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/kategori-produk/pipa/pipa-besi/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/pipa.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">Pipa Galvanis</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/besi-ss/harga-stainless-steel-surabaya/#pipastainlesssteel';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/pipa.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">Pipa Stainless</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/kawat/harga-kawat/#kawatharmonika';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/harmonika.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">Kawat Harmonika</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/kategori-produk/plat/expanded-metal/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/expanded.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">Expanded Metal</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/kategori-produk/besi-profile/cnp/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/cnp.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">CNP</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/wiremesh/daftar-harga-wiremesh-oktober-2020/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/wiremesh.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">Wiremesh</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '#';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/acrylic.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">Acrylic</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/uncategorized/harga-besi-beton-terbaru-2018/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/beton.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">Besi Beton</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/kategori-produk/besi-profile/wf/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/wf.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">WF</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/kategori-produk/besi-profile/hbeam/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/hbeam.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">H-Beam</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/kategori-produk/besi-profile/unp/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/unp.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">UNP</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/besi-siku/harga-besi-siku-surabaya/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/siku.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">SIKU</h6>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2 (menu)-->
+    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="ModalLabel12" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header px-md-5">
+            <h5 class="modal-title" id="exampleModalLabel2">PT Sahabat Ana Grup</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body mx-auto mt-3" style="max-width: 1000px;">
+
+            <form class="d-flex mb-4">
+              <div class="input-group">
+                <span class="input-group-text" id="basic-addon2">Search</span>
+                <input onkeyup="cari2(this.value)" type="text" class="form-control" placeholder="cari produk" aria-label="Username2" aria-describedby="basic-addon2">
+              </div>
+              <div id="hasil2" class="mt-5 rounded-bottom position-absolute bg-light" style="z-index: 100;">
+              </div>
+            </form>
+
+            <div onclick="window.location.href = '/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/home.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">Home</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/produk/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/all.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">Produk</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/about-us/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/about.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">About</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/contact-us/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/contact.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">Contact</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/akun-saya/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/account.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">Akun</h6>
+              </div>
+            </div>
+
+            <hr class="rounded float-start mt-0 mb-4" style="height: 5px;width: 100%;background-color: #0C27A7!important;">
+
+            <div onclick="window.location.href = '/kategori-produk/besi-profile/besi-hollow/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/hollow.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">Hollow Galvanis</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/besi-ss/harga-stainless-steel-surabaya/#hollowstainlesssteel';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/galvalum.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">Hollow Stainless</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/kategori-produk/pipa/pipa-besi/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/pipa.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">Pipa Galvanis</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/besi-ss/harga-stainless-steel-surabaya/#pipastainlesssteel';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/pipa.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">Pipa Stainless</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/kawat/harga-kawat/#kawatharmonika';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/harmonika.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">Kawat Harmonika</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/kategori-produk/plat/expanded-metal/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/expanded.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">Expanded Metal</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/kategori-produk/besi-profile/cnp/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/cnp.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">CNP</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/wiremesh/daftar-harga-wiremesh-oktober-2020/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/wiremesh.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">Wiremesh</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '#';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/acrylic.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">Acrylic</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/uncategorized/harga-besi-beton-terbaru-2018/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/beton.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">Besi Beton</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/kategori-produk/besi-profile/wf/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/wf.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">WF</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/kategori-produk/besi-profile/hbeam/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/hbeam.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">H-Beam</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/kategori-produk/besi-profile/unp/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/unp.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">UNP</h6>
+              </div>
+            </div>
+
+            <div onclick="window.location.href = '/besi-siku/harga-besi-siku-surabaya/';" class="card float-start apip_pointer" style="width: 100px;border: 0px;height: 100px;">
+              <img src="/apip/siku.png" class="mx-auto" style="width: 40px;">
+              <div class="card-body pt-2 px-0">
+                <h6 class="card-title text-center fw500">SIKU</h6>
+              </div>
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      function cari(str) {
+        if (str.length == 0) {
+          hasil.innerHTML = "";
+          return;
+        } else {
+          var xmlhttp = new XMLHttpRequest();
+          xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              hasil.innerHTML = this.responseText;
+              rapi();
+            }
+          };
+          xmlhttp.open("GET", "/apip.php?q=" + str, true);
+          xmlhttp.send();
+        }
+      }
+
+      function rapi() {
+        for (var i = 0; i < document.getElementsByClassName('apipx').length; i++) {
+          var generated = "";
+          for (var y = 0; y < document.getElementsByClassName('apipx')[i].getElementsByTagName('li').length; y++) {
+            generated = generated + document.getElementsByClassName('apipx')[i].getElementsByTagName('li')[y].innerText + " | ";
+          }
+          document.getElementsByClassName('apipx')[i].innerHTML = generated;
+        }
+      }
+
+      function cari2(str) {
+        if (str.length == 0) {
+          hasil2.innerHTML = "";
+          return;
+        } else {
+          var xmlhttp = new XMLHttpRequest();
+          xmlhttp.onreadystatechange = function() {
+            console.log("terima1");
+            if (this.readyState == 4 && this.status == 200) {
+              hasil2.innerHTML = this.responseText;
+              rapi2();
+            }
+          };
+          xmlhttp.open("GET", "/apip.php?q=" + str, true);
+          xmlhttp.send();
+        }
+      }
+
+      function rapi2() {
+        for (var i = 0; i < document.getElementsByClassName('apipx2').length; i++) {
+          var generated = "";
+          for (var y = 0; y < document.getElementsByClassName('apipx2')[i].getElementsByTagName('li').length; y++) {
+            generated = generated + document.getElementsByClassName('apipx2')[i].getElementsByTagName('li')[y].innerText + " | ";
+          }
+          document.getElementsByClassName('apipx2')[i].innerHTML = generated;
+        }
+      }
+    </script>
+  </body>
+</html>
+<!-- APIP CODE END -->

@@ -1,0 +1,51 @@
+<style>
+  .apip_post_a{
+    text-decoration:none!important;
+    display: block!important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .apip_ftoc{
+    position: fixed;
+    top: 150px;
+    z-index: 1;
+    background: white;
+    width: max-content;
+    max-width: 80vw;
+    right: 40px;
+  }
+  .apip_ftoc_x{
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    cursor: pointer;
+  }
+  #ftocx{
+    display:none;
+    cursor: pointer;
+  }
+  .apip_td{
+    text-decoration: none!important;
+  }
+</style>
+<div id="ftocx" class="apip_ftoc mb-5 rounded shadow" onclick="ftoc.style.display='block';ftocx.style.display='none'">
+  <h5 class="text-light py-2 px-3 mb-0 rounded bg-success">
+    Daftar Isi
+  </h5>
+</div>
+<div id="ftoc" class="apip_ftoc p-1 mb-5 shadow rounded border border-success border-2">
+  <h5 class="text-light mb-0 px-3 py-2 rounded bg-success">
+    Daftar Isi<div onclick="ftoc.style.display='none';ftocx.style.display='block'" class="apip_ftoc_x">X</div>
+  </h5>
+  <div class="p-2" style="max-height: 30vh;overflow-y: auto;">
+    <a class="apip_post_a" href="#kegunaan">1. Kegunaan dan kelebihan Pipa Galvanis</a>
+
+    <a class="apip_post_a" href="#keunggulaan">2. Keunggulan Pipa Galvanis</a>
+
+    <a class="apip_post_a" href="#ukuran">3. Daftar Ukuran Pipa Galvanis</a>
+
+    <a class="apip_post_a" href="#harga">4. Daftar Harga Pipa Galvanis</a>
+
+    <a class="apip_post_a" href="#terkait">5. Produk terkait Lainnya</a>
+  </div>
+</div>

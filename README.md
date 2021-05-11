@@ -34,3 +34,7 @@ on line 574
 
 Step #10
 amp/templates/single.php -> copy all aja, karena ori nya terlalu berantakan
+
+Step #11
+apip/
+berikut merupakan gambar-gambar yang dibutuhkan untuk custom menu, page, dll

@@ -1,0 +1,783 @@
+<!-- APIP ABOUT -->
+<style>
+  #primary {
+    margin-bottom: -70px;
+  }
+  .entry-header{
+    display: none;
+  }
+  .storefront-breadcrumb{
+    display: none;
+  }
+  .woocommerce-breadcrumb{
+    display: none;
+  }
+  .carouselmobile1{
+    background-image: url('/apip/about-us.png');
+    width: 100%;
+    height: 400px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .carouselmobile2{
+    width: 100%;
+    height: 400px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    background-color: #16232d;
+  }
+  .carouselmobile3{
+    width: 100%;
+    height: 400px;
+    z-index: 100;
+  }
+  .carouselmobile3_t1{
+    color: #ffde01;
+    font-family: "Helvetica", Sans-serif;
+    font-style: oblique;
+    font-size: 20px;
+  }
+  .carouselmobile3_t2{
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 44px;
+    font-size: 50px;
+    font-family: "Racing Sans One", Sans-serif;
+  }
+  .carousel_t3{
+    background-color: #ffde01;
+    color: #5804fa;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Racing Sans One", Sans-serif;
+    cursor: pointer;
+    width: max-content;
+  }
+
+  .carouseltablet1{
+    background-image: url('/apip/about-us.png');
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 0px;
+  }
+
+  .carouseldesktop1{
+    background-image: url('/apip/about-us.png');
+    width: 100%;
+    height: 90vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .carouseldesktop2{
+    width: 100%;
+    height: 90vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    background-color: #16232d;
+    }
+  .carouseldesktop3_t1{
+    color: #ffde01;
+    font-family: "Helvetica", Sans-serif;
+    font-style: oblique;
+    font-size: 30px;
+  }
+  .carouseldesktop3_t2{
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 0.8em;
+    font-size: 110px;
+    font-family: "Racing Sans One", Sans-serif;
+  }
+
+
+  .section2{
+    background-color: #5804fa;
+  }
+
+  .section2desktopt1 {
+    color: #ffde01;
+    font-family: "Helvetica", Sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    font-style: oblique;
+  }
+  .section2desktopt2 {
+    color: #ffffff;
+    font-family: "Racing Sans One", Sans-serif;
+    font-size: 65px;
+    font-weight: bold;
+    line-height: 0.8em;
+    font-style: oblique;
+  }
+
+  .section2tablet{
+    color: #ffffff;
+    font-family: "Racing Sans One", Sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 0.8em;
+    font-style: oblique;
+  }
+
+  .section2mobile1 {
+    color: #ffde01;
+    font-family: "Helvetica", Sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    font-style: oblique;
+  }
+  .section2mobile2 {
+    color: #ffffff;
+    font-family: "Racing Sans One", Sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 0.8em;
+    font-style: oblique;
+  }
+
+
+  .section3{
+    height: 30px;
+    background: #ffde01;
+  }
+
+
+  .section4desktop1{
+    background-image: url('/apip/besi-hollow-hitam.jpg');
+    width: 100%;
+    height: 60vh;
+    background-position-x: center;
+    background-position-y: -480px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .section4desktop2{
+    width: 100%;
+    height: 60vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    background-color: #16232d;
+    }
+  .section4desktop3{
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 0.8em;
+    font-size: 70px;
+    font-family: "Racing Sans One", Sans-serif;
+  }
+  .section4desktop4 {
+    background-color: #ffde01;
+    color: #5804fa;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Racing Sans One", Sans-serif;
+    cursor: pointer;
+    width: max-content;
+  }
+
+
+  .section4tablet1{
+    background-image: url('/apip/besi-hollow-hitam.jpg');
+    width: 100%;
+    height: 35vh;
+    background-position-x: center;
+    background-position-y: -280px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .section4tablet2{
+    width: 100%;
+    height: 35vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    background-color: #16232d;
+    }
+
+  .section4mobile1{
+    background-image: url('/apip/besi-hollow-hitam.jpg');
+    width: 100%;
+    height: 70vh;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .section4mobile2{
+    width: 100%;
+    height: 70vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    background-color: #16232d;
+    }
+  .section4mobile3{
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 0.8em;
+    font-size: 50px;
+    font-family: "Racing Sans One", Sans-serif;
+  }
+
+
+  .font1 {
+    font-family: "Racing Sans One", Sans-serif;
+  }
+  .section6desktopt1 {
+    font-family: "Helvetica", Sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    font-style: oblique;
+  }
+  .section6desktopt2 {
+    font-family: "Racing Sans One", Sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    font-style: oblique;
+    line-height: 0.8em;
+  }
+
+  .section6mobilet1 {
+    font-family: "Helvetica", Sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: oblique;
+  }
+  .section6mobilet2 {
+    font-family: "Racing Sans One", Sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    font-style: oblique;
+    line-height: 0.8em;
+  }
+</style>
+
+<!-- section1 -->
+<!-- section1 mobile -->
+<div id="carouselmobile" class="carousel slide pointer-event d-md-none" data-bs-ride="carousel" style="height: 400px;">
+  <div class="carousel-item active carouselmobile1"></div>
+  <div class="carousel-item active carouselmobile2"></div>
+  <div class="carousel-item active carouselmobile3">
+    <h4 class="text-center carouselmobile3_t1 mt-5 pt-5">Body and Soul Is The Answer</h4>
+    <h1 class="text-center carouselmobile3_t2 mt-0 fst-italic">OUR STORY</h1>
+  </div>
+</div>
+<!-- section1 mobile end -->
+
+
+<!-- section1 tablet -->
+<div id="carouseltablet" class="carousel slide pointer-event d-none d-md-block d-lg-none" data-bs-ride="carousel" style="height: 400px;">
+  <div class="carousel-item active carouseltablet1"></div>
+  <div class="carousel-item active carouselmobile2"></div>
+  <div class="carousel-item active carouselmobile3">
+    <h4 class="text-center carouselmobile3_t1 mt-5 pt-5">Body and Soul Is The Answer</h4>
+    <h1 class="text-center carouselmobile3_t2 mt-5 fst-italic">OUR STORY</h1>
+  </div>
+</div>
+<!-- section1 tablet end -->
+
+
+<!-- desktop -->
+<div id="carouseldesktop" class="carousel slide d-none d-lg-block" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active carouseldesktop1"></div>
+    <div class="carousel-item active carouseldesktop2"></div>
+    <div class="carousel-item active pt-5 mt-5">
+      <h4 class="text-center carouseldesktop3_t1 mt-5 pt-5">Body and Soul Is The Answer</h4>
+      <h1 class="text-center carouseldesktop3_t2 mt-5 fst-italic">OUR STORY</h1>
+    </div>
+  </div>
+</div>
+<!-- section1 desktop end -->
+
+<!-- section1 section1 end -->
+
+
+
+
+
+
+<!-- section2 end -->
+<!-- section2 desktop end -->
+<div class="w-100 section2 py-5 px-5 d-none d-lg-block">
+  <div class="py-4"></div>
+  <div class="row mx-0">
+    <div class="col-6">
+      <div class="section2desktopt1 mt-5">
+        Pusat #1 Material Konstruksi Di Surabaya
+      </div>
+      <div class="section2desktopt2 mb-5 pb-3">
+        PT. SAHABAT ANA GRUP
+      </div>
+
+      <div class="text-light mb-5">
+        PT. Sahabat Ana Grup merupakan perusahaan yang bergerak di bidang penjualan material konstruksi khususnya material besi. Fokus untuk memenuhi kebutuhan pembangunan proyek maupun rumah tangga di seluruh Indonesia.
+      </div>
+
+      <div class="mb-1 text-light">
+        <div class="float-start pe-2">
+          <img src="/apip/check2.png">
+        </div>
+        <div>Pelayanan Cepat</div>
+      </div>
+
+      <div class="mb-1 text-light">
+        <div class="float-start pe-2">
+          <img src="/apip/check2.png">
+        </div>
+        <div>Harga Kompetitif</div>
+      </div>
+
+      <div class="mb-1 text-light">
+        <div class="float-start pe-2">
+          <img src="/apip/check2.png">
+        </div>
+        <div>Produk Terlengkap</div>
+      </div>
+
+      <div class="mb-1 text-light">
+        <div class="float-start pe-2">
+          <img src="/apip/check2.png">
+        </div>
+        <div>Kendali Mutu</div>
+      </div>
+
+      <div class="mb-1 text-light">
+        <div class="float-start pe-2">
+          <img src="/apip/check2.png">
+        </div>
+        <div>KeamananTransaksi</div>
+      </div>
+
+      <div class="mb-1 text-light">
+        <div class="float-start pe-2">
+          <img src="/apip/check2.png">
+        </div>
+        <div>Keamanan Pengiriman</div>
+      </div>
+
+      <div class="mb-1 text-light">
+        <div class="float-start pe-2">
+          <img src="/apip/check2.png">
+        </div>
+        <div>Metode Pengiriman Fleksibel</div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="py-4"></div>
+</div>
+<!-- section2 desktop end -->
+
+<!-- section2 tablet end -->
+<div class="w-100 section2 py-5 px-5 d-none d-md-block d-lg-none">
+  <div class="py-4"></div>
+  <div class="row mx-0">
+    <div class="col-12">
+      <div class="section2desktopt1 mt-5 text-center">
+        Pusat #1 Material Konstruksi Di Surabaya
+      </div>
+      <div class="section2tablet mb-5 pb-3 text-center">
+        PT. SAHABAT ANA GRUP
+      </div>
+
+      <div class="text-light mb-5">
+        PT. Sahabat Ana Grup merupakan perusahaan yang bergerak di bidang penjualan material konstruksi khususnya material besi. Fokus untuk memenuhi kebutuhan pembangunan proyek maupun rumah tangga di seluruh Indonesia.
+      </div>
+
+      <div class="mb-1 text-light">
+        <div class="float-start pe-2">
+          <img src="/apip/check2.png">
+        </div>
+        <div>Pelayanan Cepat</div>
+      </div>
+
+      <div class="mb-1 text-light">
+        <div class="float-start pe-2">
+          <img src="/apip/check2.png">
+        </div>
+        <div>Harga Kompetitif</div>
+      </div>
+
+      <div class="mb-1 text-light">
+        <div class="float-start pe-2">
+          <img src="/apip/check2.png">
+        </div>
+        <div>Produk Terlengkap</div>
+      </div>
+
+      <div class="mb-1 text-light">
+        <div class="float-start pe-2">
+          <img src="/apip/check2.png">
+        </div>
+        <div>Kendali Mutu</div>
+      </div>
+
+      <div class="mb-1 text-light">
+        <div class="float-start pe-2">
+          <img src="/apip/check2.png">
+        </div>
+        <div>KeamananTransaksi</div>
+      </div>
+
+      <div class="mb-1 text-light">
+        <div class="float-start pe-2">
+          <img src="/apip/check2.png">
+        </div>
+        <div>Keamanan Pengiriman</div>
+      </div>
+
+      <div class="mb-1 text-light">
+        <div class="float-start pe-2">
+          <img src="/apip/check2.png">
+        </div>
+        <div>Metode Pengiriman Fleksibel</div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="py-4"></div>
+</div>
+<!-- section2 tablet end -->
+
+<!-- section2 mobile end -->
+<div class="w-100 section2 py-5 px-1 d-md-none">
+
+  <div class="row mx-0">
+    <div class="col-12">
+      <div class="section2mobile1 mt-3 mb-2 text-center">
+        Pusat #1 Material Konstruksi Di Surabaya
+      </div>
+      <div class="section2mobile2 mb-4 pb-3 text-center">
+        PT. SAHABAT ANA GRUP
+      </div>
+
+      <div class="text-light mb-5 px-3">
+        PT. Sahabat Ana Grup merupakan perusahaan yang bergerak di bidang penjualan material konstruksi khususnya material besi. Fokus untuk memenuhi kebutuhan pembangunan proyek maupun rumah tangga di seluruh Indonesia.
+      </div>
+
+      <div class="mb-1 text-light px-3">
+        <div class="float-start pe-2">
+          <img src="/apip/check2.png">
+        </div>
+        <div>Pelayanan Cepat</div>
+      </div>
+
+      <div class="mb-1 text-light px-3">
+        <div class="float-start pe-2">
+          <img src="/apip/check2.png">
+        </div>
+        <div>Harga Kompetitif</div>
+      </div>
+
+      <div class="mb-1 text-light px-3">
+        <div class="float-start pe-2">
+          <img src="/apip/check2.png">
+        </div>
+        <div>Produk Terlengkap</div>
+      </div>
+
+      <div class="mb-1 text-light px-3">
+        <div class="float-start pe-2">
+          <img src="/apip/check2.png">
+        </div>
+        <div>Kendali Mutu</div>
+      </div>
+
+      <div class="mb-1 text-light px-3">
+        <div class="float-start pe-2">
+          <img src="/apip/check2.png">
+        </div>
+        <div>KeamananTransaksi</div>
+      </div>
+
+      <div class="mb-1 text-light px-3">
+        <div class="float-start pe-2">
+          <img src="/apip/check2.png">
+        </div>
+        <div>Keamanan Pengiriman</div>
+      </div>
+
+      <div class="mb-1 text-light px-3">
+        <div class="float-start pe-2">
+          <img src="/apip/check2.png">
+        </div>
+        <div>Metode Pengiriman Fleksibel</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<!-- section2 mobile end -->
+<!-- section2 end -->
+
+
+<!-- section3 -->
+<div class="container-fluid mx-0 px-0 section3"></div>
+<!-- section3 end -->
+
+
+
+
+
+<!-- section4 -->
+<!-- section4 desktop -->
+<div class="carousel slide d-none d-lg-block" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active section4desktop1"></div>
+    <div class="carousel-item active section4desktop2"></div>
+    <div class="carousel-item active pt-5 mt-5">
+      <h4 class="text-center carouseldesktop3_t1 mt-5 pt-5">Hubungi Kami</h4>
+      <h1 class="text-center section4desktop3 mt-0 fst-italic">BE A SMART BUYER</h1>
+      <div onclick="window.location = '/contact-us/'" class="text-center section4desktop4 my-5 fst-italic px-4 py-2 mx-auto">
+        Hubungi Kami &gt;&gt;
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section4 desktop end -->
+
+<!-- section4 tablet -->
+<div class="carousel slide d-none d-md-block d-lg-none" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active section4tablet1"></div>
+    <div class="carousel-item active section4tablet2"></div>
+    <div class="carousel-item active pt-5 mt-5">
+      <h4 class="text-center carouseldesktop3_t1 pt-3">Hubungi Kami</h4>
+      <h1 class="text-center section4desktop3 mt-0 fst-italic">BE A SMART BUYER</h1>
+      <div onclick="window.location = '/contact-us/'" class="text-center section4desktop4 my-5 fst-italic px-4 py-2 mx-auto">
+        Hubungi Kami &gt;&gt;
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section4 tablet end -->
+
+<!-- section4 mobile -->
+<div class="carousel slide d-md-none" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active section4mobile1"></div>
+    <div class="carousel-item active section4mobile2"></div>
+    <div class="carousel-item active pt-5 mt-5">
+      <h4 class="text-center carouseldesktop3_t1 pt-5">Hubungi Kami</h4>
+      <h1 class="text-center section4mobile3 mt-0 fst-italic">BE A SMART BUYER</h1>
+      <div onclick="window.location = '/contact-us/'" class="text-center section4desktop4 my-5 fst-italic px-4 py-2 mx-auto">
+        Hubungi Kami &gt;&gt;
+      </div>
+    </div>
+  </div>
+</div>
+<!-- section4 mobile end -->
+
+<!-- section4 end -->
+
+
+
+
+<!-- section5 -->
+<div class="container-fluid mx-0 px-0 section3"></div>
+<!-- section5 end -->
+
+
+
+
+
+<!-- section6 -->
+<!-- section6 desktop -->
+<div class="w-100 section2 py-5 px-5 d-none d-lg-block">
+  <div class="section6desktopt1 px-5 mt-5 text-white">
+    Profesional Team
+  </div>
+  <div class="section6desktopt2 px-5 mb-5 text-white">
+    <div class="row d-flex align-items-center">
+      <div class="col">
+        FRESH &amp; INNOVATIVE
+      </div>
+      <div class="col bg-white" style="height:2px">
+
+      </div>
+    </div>
+  </div>
+  <div class="row px-5 my-5 mx-0">
+
+    <div class="col-4 px-5">
+      <div class="mb-4">
+        <img class="mx-auto d-block" src="/apip/fast.png">
+      </div>
+      <div class="h4 text-light fw-bold text-center fst-italic font1">
+        PELAYANAN CEPAT
+      </div>
+      <div class="text-light text-center">
+        Kami tahu betul anda<br>membutuhkan fast respon.
+      </div>
+    </div>
+
+    <div class="col-4 px-5">
+      <div class="mb-4">
+        <img class="mx-auto d-block" src="/apip/money_check.png">
+      </div>
+      <div class="h4 text-light fw-bold text-center fst-italic font1">
+        HARGA KOMPETITIF
+      </div>
+      <div class="text-light text-center">
+        Buktikan !!!
+      </div>
+    </div>
+
+    <div class="col-4 px-5">
+      <div class="mb-4">
+        <img class="mx-auto d-block" src="/apip/check.png">
+      </div>
+      <div class="h4 text-light fw-bold text-center fst-italic font1">
+        KEAMANAN TRANSAKSI
+      </div>
+      <div class="text-light text-center">
+        Legalitas Perusahaan kami telah<br>terdaftar resmi, Cek via AHU
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<!-- section6 desktop end -->
+
+
+<!-- section6 tablet -->
+<div class="w-100 section2 py-5 px-1 d-none d-md-block d-lg-none">
+
+  <div class="section6desktopt1 px-5 mt-5 text-white">
+    Profesional Team
+  </div>
+  <div class="section6desktopt2 px-5 mb-5 text-white">
+    <div class="row d-flex align-items-center">
+      <div class="col">
+        FRESH &amp; INNOVATIVE
+      </div>
+      <div class="col bg-white" style="height:2px">
+
+      </div>
+    </div>
+  </div>
+  <div class="row px-1 my-5 mx-0">
+
+    <div class="col-4 px-1">
+      <div class="mb-4">
+        <img class="mx-auto d-block" src="/apip/fast.png">
+      </div>
+      <div class="h4 text-light fw-bold text-center fst-italic font1">
+        PELAYANAN<br>CEPAT
+      </div>
+      <div class="text-light text-center">
+        Kami tahu betul anda<br>membutuhkan fast respon.
+      </div>
+    </div>
+
+    <div class="col-4 px-1">
+      <div class="mb-4">
+        <img class="mx-auto d-block" src="/apip/money_check.png">
+      </div>
+      <div class="h4 text-light fw-bold text-center fst-italic font1">
+        HARGA<br>KOMPETITIF
+      </div>
+      <div class="text-light text-center">
+        Buktikan !!!
+      </div>
+    </div>
+
+    <div class="col-4 px-1">
+      <div class="mb-4">
+        <img class="mx-auto d-block" src="/apip/check.png">
+      </div>
+      <div class="h4 text-light fw-bold text-center fst-italic font1">
+        KEAMANAN<br>TRANSAKSI
+      </div>
+      <div class="text-light text-center">
+        Legalitas Perusahaan kami telah<br>terdaftar resmi, Cek via AHU
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- section6 tablet end -->
+
+
+<!-- section6 mobile -->
+<div class="w-100 section2 py-5 px-1 d-md-none">
+
+  <div class="section6mobilet1 mt-3 text-white text-center">Profesional Team</div>
+  <div class="section6mobilet2 mb-3 text-white text-center">FRESH &amp; INNOVATIVE</div>
+  <div class="bg-white mx-4" style="height:2px"></div>
+  <div class="px-1 my-5">
+
+    <div class="px-1 mb-5">
+      <div class="mb-2">
+        <img class="mx-auto d-block" src="/apip/fast.png">
+      </div>
+      <div class="h4 text-light fw-bold text-center fst-italic font1">
+        PELAYANAN CEPAT
+      </div>
+      <div class="text-light text-center">
+        Kami tahu betul anda<br>membutuhkan fast respon.
+      </div>
+    </div>
+
+    <div class="px-1 mb-5">
+      <div class="mb-2">
+        <img class="mx-auto d-block" src="/apip/money_check.png">
+      </div>
+      <div class="h4 text-light fw-bold text-center fst-italic font1">
+        HARGA KOMPETITIF
+      </div>
+      <div class="text-light text-center">
+        Buktikan !!!
+      </div>
+    </div>
+
+    <div class="px-1 mb-5">
+      <div class="mb-2">
+        <img class="mx-auto d-block" src="/apip/check.png">
+      </div>
+      <div class="h4 text-light fw-bold text-center fst-italic font1">
+        KEAMANAN TRANSAKSI
+      </div>
+      <div class="text-light text-center">
+        Legalitas Perusahaan kami telah<br>terdaftar resmi, Cek via AHU
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- section6 mobile end -->
+<!-- section6 end -->
+
+
+
+
+
+<!-- section7 -->
+<div class="container-fluid mx-0 px-0 section3"></div>
+<!-- section7 end -->

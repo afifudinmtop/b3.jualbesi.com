@@ -9,3 +9,7 @@ Copy widget2 di widgets -> custom html -> below header
 
 Step #3
 Copy widget3 di widgets -> custom html -> footer column 1
+
+Step #4
+file /storefront-child-theme-master/function.php merupakan file original dari b3.jualbesi.com
+adapun self code nya ada di line 123-227

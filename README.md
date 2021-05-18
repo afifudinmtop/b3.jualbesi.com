@@ -61,3 +61,11 @@ ada di widget -> apip_skema_corporation & apip_skema_product
 
 Step #16
 Apip.php untuk search box script header
+
+Step #17
+apip_search_on_post.php taruh di root /
+untuk search box di post
+
+Step #18
+apip_search_on_post_form.html taruh di post
+untuk search box di post

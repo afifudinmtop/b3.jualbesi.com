@@ -30,8 +30,9 @@ Step #9
 amp/templates/style.php
 on line 38-153
 on line 230
-on line 574
 on line 333-334
+on line 494
+on line 574
 
 Step #10
 amp/templates/single.php -> copy all aja, karena ori nya terlalu berantakan

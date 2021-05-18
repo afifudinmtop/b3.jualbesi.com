@@ -54,3 +54,7 @@ berisi custom html untuk membuat floating custom table of content untuk post
 Step #14
 adapun semua file backup dan file diatas bisa di download dari google drive berikut
 https://drive.google.com/drive/folders/1NpczGkkZMn7qkezYdEJCexC4KCqty1CN?usp=sharing
+
+Step #15
+schema
+ada di widget -> apip_skema_corporation & apip_skema_product

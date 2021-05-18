@@ -1,0 +1,71 @@
+<form class="">
+  <div class="input-group">
+    <span class="input-group-text" id="basic-addon">Search</span>
+    <input onkeyup="cari_post(this.value)" type="text" class="form-control" placeholder="cari produk" aria-label="Username" aria-describedby="basic-addon">
+  </div>
+  <div id="apip_post_hasil" class="rounded-bottom position-relative bg-light" style="z-index: 100;">
+  </div>
+</form>
+
+<script>
+  var url = window.location.href;
+  var x = '';
+  generate_x();
+  function generate_x() {
+    if (url.includes("hollow-galvanis")) {
+      x = 'hollow galvanis';
+    }
+    else if (url.includes("hollow-hitam")) {
+      x = 'hollow hitam';
+    }
+    else if (url.includes("hollow-galvalum")) {
+      x = 'hollow galvalum';
+    }
+    else if (url.includes("hollow")) {
+      x = 'hollow';
+    }
+    else if (url.includes("kawat")) {
+      x = 'kawat';
+    }
+    else if (url.includes("siku-lubang")) {
+      x = 'siku lubang';
+    }
+    else if (url.includes("wiremesh")) {
+      x = 'wiremesh';
+    }
+    else if (url.includes("beton")) {
+      x = 'beton';
+    }
+    else if (url.includes("siku")) {
+      x = 'siku';
+    }
+    else if (url.includes("stainless")) {
+      x = 'stainless';
+    }
+    else if (url.includes("plat-bordes")) {
+      x = 'plat bordes';
+    }
+    else if (url.includes("pipa-galvanis")) {
+      x = 'pipa air galvanis';
+    }
+    else if (url.includes("pipa-pvc")) {
+      x = 'pipa pvc';
+    }
+  }
+
+  function cari_post(str) {
+    if (str.length == 0) {
+      hasil.innerHTML = "";
+      return;
+    } else {
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          apip_post_hasil.innerHTML = this.responseText;
+        }
+      };
+      xmlhttp.open("GET", "/apip_search_on_post.php?q=" + str + '&x=' + x, true);
+      xmlhttp.send();
+    }
+  }
+</script>

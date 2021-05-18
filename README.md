@@ -36,7 +36,7 @@ on line 539-541;
 on line 574;
 
 Step #10
-amp/templates/single.php -> copy all aja, karena ori nya terlalu berantakan
+amp/templates/single.php -> copy all aja, karena ori nya terlalu berantakan, atau bisa on line 32-90
 
 Step #11
 apip/

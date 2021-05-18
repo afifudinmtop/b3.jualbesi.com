@@ -1,0 +1,108 @@
+<!-- APIP Schema Product -->
+<div id="apip_skema_product_canvas" style="display: none;">
+
+</div>
+
+<script type="text/javascript">
+  setTimeout(function(){
+    skema_product();
+  },2000);
+
+  function skema_product() {
+    var url = window.location.href;
+
+    if (url.includes("produk")) {
+      var judul = document.getElementsByClassName('product_title entry-title elementor-heading-title elementor-size-default')[0].innerText;
+      var sku = document.getElementsByClassName('tdtable')[0].innerText;
+      var kategori = document.getElementsByClassName('tdtable')[1].innerText;
+      var brand = document.getElementsByClassName('tdtable')[2].innerText;
+      var lebar = document.getElementsByClassName('tdtable')[3].innerText;
+      var tinggi = document.getElementsByClassName('tdtable')[4].innerText;
+      var gambar = document.getElementsByClassName('woocommerce-product-gallery__image')[0].getElementsByTagName('a')[0].href;
+      var harga = document.getElementsByClassName('price')[0].innerText
+
+      if (document.getElementsByClassName('woocommerce-product-details__short-description').length > 0) {
+        var deskripsi = document.getElementsByClassName('woocommerce-product-details__short-description')[0].innerText;
+      }
+      else {
+        var deskripsi = "";
+      }
+
+      if (document.getElementsByClassName('woocommerce-product-attributes-item__value').length > 1) {
+        var bahan = document.getElementsByClassName('woocommerce-product-attributes-item__value')[2].innerText;
+      }
+      else {
+        var bahan = "";
+      }
+
+      harga = harga.replace("Rp", "");
+      harga = harga.replace(",", "");
+      harga = harga.replace("Call for Price", "123");
+
+      // Produk
+      var cetak = '<div style="display: none;" id="apip_skema_product" itemscope itemtype="https://schema.org/Product">';
+      cetak = cetak + '<span itemprop="name">' + judul + '</span>';
+      cetak = cetak + '<span itemprop="sku">' + sku + '</span>';
+      cetak = cetak + '<span itemprop="brand">' + brand + '</span>';
+      cetak = cetak + '<span itemprop="mpn">' + sku + '</span>';
+      cetak = cetak + '<span itemprop="height">' + tinggi + '</span>';
+      cetak = cetak + '<span itemprop="width">' + lebar + '</span>';
+      cetak = cetak + '<span itemprop="material">' + bahan + '</span>';
+      cetak = cetak + '<span itemprop="category">' + kategori + '</span>';
+      cetak = cetak + '<img itemprop="image" src="' + gambar + '" alt="' + judul + '" />';
+
+      // aggregateRating
+      cetak = cetak + '<div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">';
+      cetak = cetak + 'Rated <span itemprop="ratingValue">5</span>/5';
+      cetak = cetak + 'based on <span itemprop="reviewCount">1200</span> customer reviews';
+      cetak = cetak + '</div>';
+
+      // offers
+      cetak = cetak + '<div itemprop="offers" itemscope itemtype="https://schema.org/Offer">';
+      cetak = cetak + '<span itemprop="priceCurrency" content="IDR">Rp</span><span itemprop="price" content="' + harga + '">' + harga + '</span>';
+      cetak = cetak + '<link itemprop="availability" href="https://schema.org/InStock" />In stock';
+      cetak = cetak + '<span itemprop="priceValidUntil">2022-12-12</span>';
+      cetak = cetak + '<span itemprop="url">' + url + '</span>';
+      cetak = cetak + '</div>';
+
+      // Product description
+      cetak = cetak + 'Product description:';
+      cetak = cetak + '<span itemprop="description">' + deskripsi + '</span>';
+      cetak = cetak + '<span itemprop="url">' + url + '</span>';
+
+      // review
+      cetak = cetak + 'Customer reviews:';
+      cetak = cetak + '<div itemprop="review" itemscope itemtype="https://schema.org/Review">';
+      cetak = cetak + '<span itemprop="name">Fast Response</span> -';
+      cetak = cetak + 'by <span itemprop="author">Alex</span>,';
+      cetak = cetak + '<meta itemprop="datePublished" content="2021-02-01">February 1, 2021';
+
+      // review 1
+      cetak = cetak + '<div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">';
+      cetak = cetak + '<meta itemprop="worstRating" content = "1">';
+      cetak = cetak + '<span itemprop="ratingValue">5</span>/';
+      cetak = cetak + '<span itemprop="bestRating">5</span>stars';
+      cetak = cetak + '</div>';
+      cetak = cetak + '<span itemprop="reviewBody">Mantab, Harga murah, Kualitas bagus</span>';
+      cetak = cetak + '</div>';
+
+      // review 2
+      cetak = cetak + '<div itemprop="review" itemscope itemtype="https://schema.org/Review">';
+      cetak = cetak + '<span itemprop="name">Value purchase</span> -';
+      cetak = cetak + 'by <span itemprop="author">Afifudin</span>,';
+      cetak = cetak + '<meta itemprop="datePublished" content="2021-03-16">March 16, 2021';
+      cetak = cetak + '<div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">';
+      cetak = cetak + '<meta itemprop="worstRating" content = "1"/>';
+      cetak = cetak + '<span itemprop="ratingValue">5</span>/';
+      cetak = cetak + '<span itemprop="bestRating">5</span>stars';
+      cetak = cetak + '</div>';
+      cetak = cetak + '<span itemprop="reviewBody">Terbaik</span>';
+      cetak = cetak + '</div>';
+
+      cetak = cetak + '</div>';
+
+      apip_skema_product_canvas.innerHTML = cetak;
+    }
+  }
+</script>
+<!-- APIP Schema Product End -->

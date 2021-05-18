@@ -12,7 +12,7 @@
   }
   $q = $_GET['q'];
   $kirim = '<div class="list-group">';
-  $sql = "select * from wpfx_posts where post_type ='product' and post_title like '%".$q."%' order by post_title asc limit 7";
+  $sql = "select * from wpfx_posts where post_type ='product' and post_title like '%".$q."%' order by post_title asc limit 5";
   $result = mysqli_query($conn, $sql);
 
 
@@ -59,7 +59,7 @@
     $height = $row5["meta_value"];
 
 
-    $kirim = $kirim.'<a href="https://www.jualbesi.com/produk/'.$link.'/" class="list-group-item list-group-item-action">';
+    $kirim = $kirim.'<a href="https://jualbesi.com/produk/'.$link.'/" class="list-group-item list-group-item-action">';
     $kirim = $kirim.'<div class="d-flex w-100 justify-content-between">';
     $kirim = $kirim.'<div class="" style="font-size: 12px;font-weight: bold;">'.$post_title.'</div>';
     $kirim = $kirim.'<div class="text-muted" style="font-size: 12px!important;">'.$price.'</div>';
@@ -68,6 +68,25 @@
     $kirim = $kirim.'<div class="text-muted" style="font-size: 10px!important;">Dimensi: '.$length.'x'.$width.'x'.$height.'</div>';
     $kirim = $kirim.'</a>';
   }
+
+
+
+  // cari post
+  $sql2 = "select * from wpfx_posts where post_type ='post' and post_status ='publish' and post_title like '%".$q."%' order by post_title asc limit 2";
+  $result2 = mysqli_query($conn, $sql2);
+
+  while($row2 = mysqli_fetch_assoc($result2)) {
+    $post_title2 = $row2["post_title"];
+    $link2 = $row2["guid"];
+
+    $kirim = $kirim.'<a href="'.$link2.'" class="list-group-item list-group-item-action">';
+    $kirim = $kirim.'<div class="d-flex w-100 justify-content-between">';
+    $kirim = $kirim.'<div class="" style="font-size: 12px;font-weight: bold;">'.$post_title2.'</div>';
+    $kirim = $kirim.'<div class="text-muted" style="font-size: 12px!important;">Page</div>';
+    $kirim = $kirim.'</div>';
+    $kirim = $kirim.'</a>';
+  }
+
   $kirim = $kirim.'</div>';
   echo $kirim;
 ?>

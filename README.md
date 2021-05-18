@@ -30,6 +30,7 @@ Step #9
 amp/templates/style.php
 on line 38-153;
 on line 230;
+on line 292-296;
 on line 333-334;
 on line 494;
 on line 539-541;

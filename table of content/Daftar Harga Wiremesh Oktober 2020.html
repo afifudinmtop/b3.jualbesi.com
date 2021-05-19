@@ -1,87 +1,95 @@
-<style>
-  img.attachment-.size-.wp-post-image {
-    display: none!important;
-  }
-  .apip_post_a{
-    text-decoration:none!important;
-    display: block!important;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-  .apip_ftoc{
-    position: fixed;
-    top: 150px;
-    z-index: 1;
-    background: white;
-    width: max-content;
-    max-width: 80vw;
-    right: 40px;
-    border-radius: .25rem!important;
-    padding: .25rem!important;
-    border: 2px solid #198754!important;
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
-  }
-  .apip_ftoc_x{
-    position: absolute;
-    top: 13px;
-    right: 20px;
-    cursor: pointer;
-  }
-  #ftocx{
-    cursor: pointer;
-  }
-  .apip_td{
-    text-decoration: none!important;
-  }
-  .ftoc_isi{
-    border-radius: .25rem!important;
-    background-color: #198754!important;
-    color: #f8f9fa!important;
-    padding-top: .5rem!important;
-    padding-bottom: .5rem!important;
-    padding-right: 1rem!important;
-    padding-left: 1rem!important;
-    margin-bottom: 0!important;
-    font-size: 1.25rem;
-    margin-top: 0;
-    line-height: 1.2;
-  }
-  .ftoc_isi2{
-    padding: .5rem!important;
-    max-height: 30vh;
-    overflow-y: auto;
-  }
-  .ftocx_isi{
-    border-radius: .25rem!important;
-    background-color: #198754!important;
-    color: #f8f9fa!important;
-    padding-top: .5rem!important;
-    padding-bottom: .5rem!important;
-    padding-right: 1rem!important;
-    padding-left: 1rem!important;
-    font-size: 1.25rem;
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 1.2;
-  }
-</style>
-<div on="tap:ftoc.show" id="ftocx" class="apip_ftoc" onclick="ftoc.style.display='block'">
-  <h5 class="ftocx_isi">
-    Daftar Isi
-  </h5>
-</div>
-<div id="ftoc" class="apip_ftoc">
-  <h5 class="ftoc_isi">
-    Daftar Isi
-    <div on="tap:ftoc.hide" onclick="ftoc.style.display='none'" class="apip_ftoc_x">X</div>
-  </h5>
-  <div class="ftoc_isi2">
-    <a class="apip_post_a" href="#pengertian">1. Pengertian Wiremesh</a>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+      img.attachment-.size-.wp-post-image {
+        display: none!important;
+      }
+      .apip_post_a{
+        text-decoration:none!important;
+        display: block!important;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+      .apip_ftoc{
+        position: fixed;
+        top: 150px;
+        z-index: 1;
+        background: white;
+        width: max-content;
+        max-width: 80vw;
+        right: 40px;
+        border-radius: .25rem!important;
+        padding: .25rem!important;
+        border: 2px solid #198754!important;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+      }
+      .apip_ftoc_x{
+        position: absolute;
+        top: 13px;
+        right: 20px;
+        cursor: pointer;
+      }
+      #ftocx{
+        cursor: pointer;
+      }
+      .apip_td{
+        text-decoration: none!important;
+      }
+      .ftoc_isi{
+        border-radius: .25rem!important;
+        background-color: #198754!important;
+        color: #f8f9fa!important;
+        padding-top: .5rem!important;
+        padding-bottom: .5rem!important;
+        padding-right: 1rem!important;
+        padding-left: 1rem!important;
+        margin-bottom: 0!important;
+        font-size: 1.25rem;
+        margin-top: 0;
+        line-height: 1.2;
+      }
+      .ftoc_isi2{
+        padding: .5rem!important;
+        max-height: 30vh;
+        overflow-y: auto;
+      }
+      .ftocx_isi{
+        border-radius: .25rem!important;
+        background-color: #198754!important;
+        color: #f8f9fa!important;
+        padding-top: .5rem!important;
+        padding-bottom: .5rem!important;
+        padding-right: 1rem!important;
+        padding-left: 1rem!important;
+        font-size: 1.25rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 1.2;
+      }
+    </style>
+  </head>
+  <body>
+    <div on="tap:ftoc.show" id="ftocx" class="apip_ftoc" onclick="ftoc.style.display='block'">
+      <h5 class="ftocx_isi">
+        Daftar Isi
+      </h5>
+    </div>
+    <div id="ftoc" class="apip_ftoc">
+      <h5 class="ftoc_isi">
+        Daftar Isi
+        <div on="tap:ftoc.hide" onclick="ftoc.style.display='none'" class="apip_ftoc_x">X</div>
+      </h5>
+      <div class="ftoc_isi2">
+        <a class="apip_post_a" href="#pengertian">1. Pengertian Wiremesh</a>
 
-    <a class="apip_post_a" href="#keunggulan">2. Keunggulan Wiremesh</a>
+        <a class="apip_post_a" href="#keunggulan">2. Keunggulan Wiremesh</a>
 
-    <a class="apip_post_a" href="#kegunaan">3. Kegunaan Wiremesh</a>
+        <a class="apip_post_a" href="#kegunaan">3. Kegunaan Wiremesh</a>
 
-    <a class="apip_post_a" href="#harga">4. Tabel Harga Wiremesh</a>
-  </div>
-</div>
+        <a class="apip_post_a" href="#harga">4. Tabel Harga Wiremesh</a>
+      </div>
+    </div>
+  </body>
+</html>

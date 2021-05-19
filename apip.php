@@ -12,13 +12,14 @@
   }
   $q = $_GET['q'];
   $kirim = '<div class="list-group">';
-  $sql = "select * from wpfx_posts where post_type ='product' and post_title like '%".$q."%' order by post_title asc limit 5";
+  $sql = "select * from wpfx_posts where post_type ='product' and post_status = 'publish' and post_title like '%".$q."%' order by post_title asc limit 5";
   $result = mysqli_query($conn, $sql);
 
 
   while($row = mysqli_fetch_assoc($result)) {
     $post_title = $row["post_title"];
     $link = str_replace(" ","-",$post_title);
+    $link = str_replace("/","-",$link);
     $post_id = $row["ID"];
     $post_excerpt = $row["post_excerpt"];
 

@@ -20,6 +20,7 @@
   while($row = mysqli_fetch_assoc($result)) {
     $post_title = $row["post_title"];
     $link = str_replace(" ","-",$post_title);
+    $link = str_replace("/","-",$link);
     $post_id = $row["ID"];
     $post_excerpt = $row["post_excerpt"];
 

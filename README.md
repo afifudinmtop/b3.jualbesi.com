@@ -69,3 +69,6 @@ untuk search box di post
 Step #18
 apip_search_on_post_form.html taruh di post
 untuk search box di post
+
+Step #19
+gtag_ads_track_wa.html taruh di widget below header untuk google ads track user click tombol wa

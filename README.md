@@ -72,3 +72,7 @@ untuk search box di post
 
 Step #19
 gtag_ads_track_wa.html taruh di widget below header untuk google ads track user click tombol wa
+
+
+Step #20
+Copy /widget/gtag_analytic di widgets -> custom html -> below header

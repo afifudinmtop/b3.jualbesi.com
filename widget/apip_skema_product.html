@@ -12,12 +12,12 @@
     var url = window.location.href;
 
     if (url.includes("produk")) {
-      var judul = document.getElementsByClassName('product_title entry-title elementor-heading-title elementor-size-default')[0].innerText;
+      var judul = document.getElementsByClassName('product_title entry-title')[0].innerText;
       var sku = document.getElementsByClassName('tdtable')[0].innerText;
       var kategori = document.getElementsByClassName('tdtable')[1].innerText;
-      var brand = document.getElementsByClassName('tdtable')[2].innerText;
-      var lebar = document.getElementsByClassName('tdtable')[3].innerText;
-      var tinggi = document.getElementsByClassName('tdtable')[4].innerText;
+      var brand = document.getElementsByClassName('posted_in')[1].innerText
+      var lebar = document.getElementsByClassName('tdtable')[2].innerText;
+      var tinggi = document.getElementsByClassName('tdtable')[3].innerText;
       var gambar = document.getElementsByClassName('woocommerce-product-gallery__image')[0].getElementsByTagName('a')[0].href;
       var harga = document.getElementsByClassName('price')[0].innerText
 
@@ -38,6 +38,11 @@
       harga = harga.replace("Rp", "");
       harga = harga.replace(",", "");
       harga = harga.replace("Call for Price", "123");
+      if (harga == "") {
+        harga = "123";
+      }
+
+      brand= brand.replace("Brand: ", "");
 
       // Produk
       var cetak = '<div style="display: none;" id="apip_skema_product" itemscope itemtype="https://schema.org/Product">';
